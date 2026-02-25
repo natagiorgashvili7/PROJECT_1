@@ -66,12 +66,20 @@
 }
 
 .first_section {
+  margin-left: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 80px;
-  margin: 50px;
 }
+  .image_wrapper {
+    padding-right: 40px;
+    height: 100%;
+    width: 100%;
+  }
+    .first_section .left_side img {
+    margin-right: 0px;
+  }
 .first_section .right_side {
   display: flex;
   flex-direction: column;
@@ -242,7 +250,7 @@
     justify-content: center;
   }
   .first_section .right_side .students {
-    justify-content: center;
+    display: none;
   }
   .first_section .left_side {
     width: 100%;
@@ -253,7 +261,7 @@
   }
   .first_section .left_side img {
     max-width: 100%;
-    height: auto;
+    height: 100%;
     margin-right: 190px;
   }
 }
