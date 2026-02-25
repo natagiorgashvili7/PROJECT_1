@@ -1,3 +1,23 @@
+@mixin get-started {
+    width: 150px;
+    height: 54px;
+    border-radius: 8px;
+    background-color: #052A44;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+@mixin learn-more {
+    width: 150px;
+    height: 54px;
+    border-radius: 8px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 .header_section {
     margin: 16px 24px;
     height: 46px;
@@ -11,7 +31,6 @@
     .logo {
         font-family: "Poppins", sans-serif;
         font-weight: 500;
-        font-style: medium;
         font-size: 20px;
         color: #FFFFFF;
         padding-left: 10px;
@@ -59,7 +78,6 @@
         .trial p{
             font-family: "Poppins", sans-serif;
             font-weight: 600;
-            font-style: medium;
             font-size: 16px;
             color: black;
             padding-left: 10px;
@@ -73,6 +91,158 @@
     }
 }
 
+.first_section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
+    margin:50px;
+
+    .right_side {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .career {
+            font-family: "Poppins", sans-serif;
+            font-weight: 700;
+            font-size: 48px;
+            color: #E8DB84;
+            padding-left: 10px;
+        }
+        h1 {
+            font-family: "Poppins", sans-serif;
+            font-weight: 700;
+            font-size: 48px;
+            color: black;
+            padding-left: 10px;
+        }
+        p {
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-size: 18px;
+            color: black;
+            padding-left: 10px;
+        }
+        .btns {
+            display: flex;
+            gap: 10px;
+
+            .start {
+                @include get-started;
+
+                p {
+                    font-family: "Poppins", sans-serif;
+                    font-weight: 600;
+                    font-size: 16px;
+                    color: white;
+                    padding-right: 10px;
+                }
+            }
+            .more {
+                @include learn-more;
+            }
+
+        }
+        .students {
+            display: flex;
+            align-items: center;
+
+            p {
+                font-family: "Poppins", sans-serif;
+                font-weight: 500;
+                font-size: 13.09px;
+                color: black;
+                padding-right: 10px;
+            }
+        }
+
+
+    }
+    .left_side img {
+        max-width: 588px;
+        height: auto;
+    }
+}
+.about_section {
+    text-align: center;
+    padding: 80px 20px;
+
+  h2 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 42px;
+    margin-bottom: 10px;
+  }
+
+  p.description {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    margin-bottom: 50px;
+    color: #071210;
+  }
+
+  .cards {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+
+    .card {
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 30px 20px;
+      max-width: 300px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      text-align: center;
+
+      .icon {
+        width: 50px;
+        height: 50px;
+        margin: 0 auto 15px;
+        background-color: #052A44;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-size: 24px;
+      }
+
+      h3 {
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-size: 22px;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-size: 16.59px;
+        line-height: 1.5;
+      }
+    }
+ }
+ .learn_more_btn {
+        margin-top: 50px;
+        @include get-started;
+        display: flex;
+        justify-content: center;
+        margin-left: auto ;
+        margin-right: auto;
+
+        p{
+            font-family: "Poppins", sans-serif;
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #FFFFFF;
+        }
+ }
+}
 
 @media (max-width: 1024px) {
     .header_section {
@@ -85,4 +255,30 @@
             padding-right: 20px;
         }
     }
+    .first_section {
+        flex-direction: column;
+        .right_side {
+            justify-content: center;
+            .btns {
+                justify-content: center;
+            }
+            .students {
+                justify-content: center;
+            }
+        }
+        .left_side {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+
+            img {
+                max-width: 100%;
+                height: auto;
+                margin-right: 190px;
+            }
+        }
+    }
 }
+
